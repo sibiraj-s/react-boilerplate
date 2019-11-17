@@ -1,0 +1,31 @@
+parser: babel-eslint
+
+extends:
+  - standard
+  - standard-react
+  - plugin:jest/recommended
+
+plugins:
+  - react-hooks
+  - jest
+
+rules:
+  react-hooks/rules-of-hooks: error
+  react-hooks/exhaustive-deps: warn
+  react/prop-types: 0
+  max-len:
+    - error
+    - code: 120
+  no-multiple-empty-lines:
+    - error
+    - max: 2
+      maxBOF: 0
+  generator-star-spacing:
+    - error
+    - after
+  semi:
+    - error
+    - always
+
+env:
+  browser: true

@@ -1,0 +1,68 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`<Content /> should render and match the snapshot 1`] = `
+<DocumentFragment>
+  <div
+    class="h-full min-h-screen flex flex-col justify-center sm:items-center px-4"
+  >
+    <div
+      class="mb-3"
+    >
+      <div
+        class="text-center"
+      >
+        <img
+          class="mx-auto"
+          src="test-file-stub"
+          width="250"
+        />
+        <p
+          class="text-4xl font-medium"
+        >
+          React.js + Webpack boilerplate
+        </p>
+      </div>
+      <p
+        class="sm:text-center"
+      >
+        React is a JavaScript library for building user interfaces.
+      </p>
+    </div>
+    <div>
+      <a
+        class="block mb-1 mr-1 sm:inline-block sm:mb-0"
+        href="https://github.com/sibiraj-s"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="Sibiraj @ Github"
+          src="https://badgen.net/badge/github/sibiraj-s?icon&color=red"
+        />
+      </a>
+      <a
+        class="block mb-1 mr-1 sm:inline-block sm:mb-0"
+        href="https://github.com/sibiraj-s/react-boilerplate"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="react-boilerplate"
+          src="https://badgen.net/badge/github/react-boilerplate?icon&label"
+        />
+      </a>
+      <a
+        class="block mb-1 sm:inline-block sm:mb-0"
+        href="https://github.com/sibiraj-s/react-boilerplate/blob/master/LICENSE"
+        rel="noopener noreferrer"
+        target="_blank"
+      >
+        <img
+          alt="MIT"
+          src="https://badgen.net/github/license/sibiraj-s/react-boilerplate?color=green"
+        />
+      </a>
+    </div>
+  </div>
+</DocumentFragment>
+`;
