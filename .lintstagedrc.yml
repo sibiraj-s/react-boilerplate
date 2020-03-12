@@ -1,7 +1,5 @@
 '*.{html,md,json,yaml,yml}':
   - prettier --write
-  - git add
 
 '*.{js,jsx}':
   - eslint --ignore-path .gitignore --fix
-  - git add
