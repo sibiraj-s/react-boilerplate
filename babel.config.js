@@ -13,16 +13,16 @@ module.exports = (api) => {
           // Do not transform modules to CJS
           modules: false,
           // Exclude transforms that make all code slower
-          exclude: ['transform-typeof-symbol']
-        }
+          exclude: ['transform-typeof-symbol'],
+        },
       ],
       isEnvTest && [
         '@babel/preset-env', {
           targets: {
             // Compile against the current node version
-            node: 'current'
-          }
-        }
+            node: 'current',
+          },
+        },
       ],
       [
         '@babel/preset-react', {
@@ -31,9 +31,9 @@ module.exports = (api) => {
           development: isEnvDevelopment,
           // Will use the native built-in instead of trying to polyfill
           // behavior for any plugins that require one.
-          useBuiltIns: true
-        }
-      ]
-    ].filter(Boolean)
+          useBuiltIns: true,
+        },
+      ],
+    ].filter(Boolean),
   };
 };

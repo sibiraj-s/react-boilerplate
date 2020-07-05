@@ -3,5 +3,5 @@ const isProduction = WEBPACK_MODE === 'production';
 
 module.exports = {
   WEBPACK_MODE,
-  isProduction
+  isProduction,
 };

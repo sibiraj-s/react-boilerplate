@@ -17,21 +17,21 @@ const baseConfig = {
   resolve: {
     extensions: ['.js', '.jsx'],
     alias: {
-      Assets: path.resolve(Paths.srcDir, 'assets')
-    }
+      Assets: path.resolve(Paths.srcDir, 'assets'),
+    },
   },
   entry: path.resolve(Paths.srcDir, 'index.js'),
   output: {
     path: Paths.outDir,
     publicPath: '/',
-    jsonpFunction: '__REACT_BOILERPLATE__'
+    jsonpFunction: '__REACT_BOILERPLATE__',
   },
   module: {
     rules: [
       {
         test: /\.jsx?$/,
         exclude: /(node_modules)/,
-        loader: 'babel-loader'
+        loader: 'babel-loader',
       },
       {
         test: /\.s?css$/,
@@ -39,34 +39,34 @@ const baseConfig = {
           isProduction ? MiniCssExtractPlugin.loader : 'style-loader',
           'css-loader',
           'postcss-loader',
-          'sass-loader'
-        ]
+          'sass-loader',
+        ],
       },
       {
         test: /\.svg$/i,
         loader: 'file-loader',
         options: {
-          name: isProduction ? 'images/[name]-[contenthash].[ext]' : '[name].[ext]'
-        }
-      }
-    ]
+          name: isProduction ? 'images/[name]-[contenthash].[ext]' : '[name].[ext]',
+        },
+      },
+    ],
   },
   plugins: [
     new HTMLWebpackPlugin({
       template: path.resolve(Paths.srcDir, 'index.html'),
-      favicon: path.resolve(Paths.srcDir, 'assets', 'webpack.png')
+      favicon: path.resolve(Paths.srcDir, 'assets', 'webpack.png'),
     }),
     new webpack.EnvironmentPlugin({
-      NODE_ENV: WEBPACK_MODE
+      NODE_ENV: WEBPACK_MODE,
     }),
     new webpack.ProgressPlugin(),
-    new CleanWebpackPlugin()
+    new CleanWebpackPlugin(),
   ],
   optimization: {
     splitChunks: {
-      chunks: 'all'
-    }
-  }
+      chunks: 'all',
+    },
+  },
 };
 
 // changes required to deploy in Github Pages

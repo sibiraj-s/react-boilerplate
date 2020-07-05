@@ -10,7 +10,7 @@ async function deploy () {
     const response = await prompt({
       type: 'confirm',
       name: 'publish',
-      message: 'Are you sure to publish to Github Pages?'
+      message: 'Are you sure to publish to Github Pages?',
     });
 
     const { publish } = response;
