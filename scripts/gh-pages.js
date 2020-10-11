@@ -5,7 +5,7 @@ const ghPages = require('gh-pages');
 
 const publishAsync = util.promisify(ghPages.publish);
 
-async function deploy () {
+const deploy = async () => {
   try {
     const response = await prompt({
       type: 'confirm',
@@ -21,6 +21,6 @@ async function deploy () {
   } catch (err) {
     console.error('Error while deploying to github pages', err);
   }
-}
+};
 
 deploy();

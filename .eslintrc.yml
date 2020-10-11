@@ -17,5 +17,12 @@ rules:
   react-hooks/exhaustive-deps: warn
   react/prop-types: 0
 
+overrides:
+  - files:
+      - 'scripts/*.js'
+    extends:
+      - pegasus
+      - pegasus/node
+
 env:
   browser: true
