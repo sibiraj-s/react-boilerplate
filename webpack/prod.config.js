@@ -18,9 +18,6 @@ module.exports = {
     new webpack.HashedModuleIdsPlugin(),
   ],
   optimization: {
-    minimizer: [
-      new OptimizeCSSAssetsPlugin(),
-      new TerserPlugin(),
-    ],
+    minimizer: [new OptimizeCSSAssetsPlugin(), new TerserPlugin()],
   },
 };

@@ -1,4 +1,4 @@
-'*.{html,md,json,yaml,yml}':
+'*.{html,md,json,yaml,yml,scss}':
   - prettier --write
 
 '*.{js,jsx}':
