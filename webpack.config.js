@@ -24,7 +24,6 @@ const baseConfig = {
   output: {
     path: Paths.outDir,
     publicPath: '/',
-    jsonpFunction: '__REACT_BOILERPLATE__',
   },
   module: {
     rules: [
