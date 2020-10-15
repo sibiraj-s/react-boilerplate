@@ -22,10 +22,10 @@
   },
   "dependencies": {
     "core-js": "^3.6.5",
-    "react": "^16.13.1",
-    "react-dom": "^16.13.1",
+    "react": "^16.14.0",
+    "react-dom": "^16.14.0",
     "regenerator-runtime": "^0.13.7",
-    "tailwindcss": "^1.8.13"
+    "tailwindcss": "^1.9.2"
   },
   "devDependencies": {
     "@babel/core": "^7.12.0",
