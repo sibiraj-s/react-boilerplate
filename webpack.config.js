@@ -4,7 +4,7 @@ const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-const Merge = require('webpack-merge');
+const { merge } = require('webpack-merge');
 
 const pkgJson = require('./package.json');
 const Paths = require('./webpack/utils/paths');
@@ -55,9 +55,6 @@ const baseConfig = {
       template: path.resolve(Paths.srcDir, 'index.html'),
       favicon: path.resolve(Paths.srcDir, 'assets', 'webpack.png'),
     }),
-    new webpack.EnvironmentPlugin({
-      NODE_ENV: WEBPACK_MODE,
-    }),
     new webpack.ProgressPlugin(),
     new CleanWebpackPlugin(),
   ],
@@ -73,4 +70,4 @@ if (process.env.NODE_ENV === 'gh-pages') {
   baseConfig.output.publicPath = `/${pkgJson.name}/`;
 }
 
-module.exports = Merge.smart(baseConfig, WEBPACK_MODE === 'development' ? devConfig : prodConfig);
+module.exports = merge(baseConfig, WEBPACK_MODE === 'development' ? devConfig : prodConfig);
