@@ -1,26 +1,41 @@
 const util = require('util');
 
-const { prompt } = require('enquirer');
+const prompts = require('prompts');
 const ghPages = require('gh-pages');
+const chalk = require('chalk');
 
 const publishAsync = util.promisify(ghPages.publish);
 
-const deploy = async () => {
+const ghPagesOptions = {
+  branch: 'gh-pages',
+  message: `docs: update ${new Date().toISOString()}`,
+};
+
+const questions = [
+  {
+    name: 'publishDocs',
+    type: 'confirm',
+    message: `Do You want to publish the docs to '${chalk.cyan(ghPagesOptions.branch)}' branch?`,
+  },
+];
+
+const publish = async () => {
   try {
-    const response = await prompt({
-      type: 'confirm',
-      name: 'publish',
-      message: 'Are you sure to publish to Github Pages?',
-    });
-
-    const { publish } = response;
-
-    if (publish) {
-      await publishAsync('build', { message: `docs: update ${new Date().toISOString()}` });
+    if (process.env.CI) {
+      prompts.inject([true]);
     }
+
+    const answers = await prompts(questions);
+
+    if (!answers.publishDocs) {
+      return;
+    }
+
+    await publishAsync('build', ghPagesOptions);
+    console.log(chalk.green(`\nDocumentation published successfully to ${chalk.cyan('\'gh-pages\'')} \n`));
   } catch (err) {
-    console.error('Error while deploying to github pages', err);
+    console.log(chalk.red('Unable to publish docs. Error:'), err);
   }
 };
 
-deploy();
+publish();
