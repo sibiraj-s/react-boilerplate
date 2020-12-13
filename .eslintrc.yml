@@ -3,10 +3,9 @@ root: true
 parser: babel-eslint
 
 extends:
-  - standard
-  - standard-react
-  - plugin:jest/recommended
   - pegasus
+  - plugin:react/recommended
+  - plugin:jest/recommended
 
 plugins:
   - react-hooks
@@ -19,10 +18,15 @@ rules:
 
 overrides:
   - files:
-      - 'scripts/*.js'
+      - '!src/*'
     extends:
-      - pegasus
       - pegasus/node
+    rules:
+      no-console: off
+
+settings:
+  react:
+    version: detect
 
 env:
   browser: true
