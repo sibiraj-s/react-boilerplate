@@ -2,7 +2,6 @@ const path = require('path');
 
 const webpack = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
-const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { merge } = require('webpack-merge');
 
@@ -24,6 +23,7 @@ const baseConfig = {
   output: {
     path: Paths.outDir,
     publicPath: '/',
+    clean: true,
   },
   module: {
     rules: [
@@ -56,7 +56,6 @@ const baseConfig = {
       favicon: path.resolve(Paths.srcDir, 'assets', 'webpack.png'),
     }),
     new webpack.ProgressPlugin(),
-    new CleanWebpackPlugin(),
   ],
   optimization: {
     splitChunks: {
