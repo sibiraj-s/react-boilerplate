@@ -16,7 +16,8 @@
     "lint": "eslint . --ignore-path .gitignore",
     "start": "webpack serve",
     "build": "NODE_ENV=production webpack",
-    "publish:docs": "NODE_ENV=gh-pages npm run build && node scripts/gh-pages.js",
+    "build:pages": "NODE_ENV=gh-pages webpack",
+    "publish:docs": "npm run build:pages && node scripts/gh-pages.js",
     "test": "NODE_ENV=test jest",
     "updateSnapshot": "NODE_ENV=test jest --updateSnapshot"
   },
