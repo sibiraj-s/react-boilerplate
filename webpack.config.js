@@ -1,6 +1,6 @@
 const path = require('path');
 
-const webpack = require('webpack');
+const { ProgressPlugin } = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const { merge } = require('webpack-merge');
@@ -55,12 +55,14 @@ const baseConfig = {
       template: path.resolve(Paths.srcDir, 'index.html'),
       favicon: path.resolve(Paths.srcDir, 'assets', 'webpack.png'),
     }),
-    new webpack.ProgressPlugin(),
+    new ProgressPlugin(),
   ],
   optimization: {
     splitChunks: {
       chunks: 'all',
     },
+    moduleIds: 'deterministic',
+    chunkIds: 'deterministic',
   },
 };
 
