@@ -3,16 +3,16 @@
 exports[`<Content /> should render and match the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="h-full min-h-screen flex flex-col justify-center sm:items-center px-4"
+    class="h-full min-h-screen flex flex-col justify-center sm:items-center px-4 text-black dark:text-white"
   >
     <div
       class="mb-3"
     >
       <div
-        class="text-center"
+        class="sm:text-center"
       >
         <img
-          class="mx-auto"
+          class="sm:mx-auto"
           src="test-file-stub"
           width="250"
         />
@@ -28,9 +28,11 @@ exports[`<Content /> should render and match the snapshot 1`] = `
         React is a JavaScript library for building user interfaces.
       </p>
     </div>
-    <div>
+    <div
+      class="flex flex-col sm:flex-row"
+    >
       <a
-        class="block mb-1 mr-1 sm:inline-block sm:mb-0"
+        class="mb-1 sm:mb-0 sm:mr-1"
         href="https://github.com/sibiraj-s"
         rel="noopener noreferrer"
         target="_blank"
@@ -41,7 +43,7 @@ exports[`<Content /> should render and match the snapshot 1`] = `
         />
       </a>
       <a
-        class="block mb-1 mr-1 sm:inline-block sm:mb-0"
+        class="mb-1 sm:mb-0 sm:mr-1"
         href="https://github.com/sibiraj-s/react-boilerplate"
         rel="noopener noreferrer"
         target="_blank"
@@ -52,7 +54,6 @@ exports[`<Content /> should render and match the snapshot 1`] = `
         />
       </a>
       <a
-        class="block mb-1 sm:inline-block sm:mb-0"
         href="https://github.com/sibiraj-s/react-boilerplate/blob/master/LICENSE"
         rel="noopener noreferrer"
         target="_blank"
