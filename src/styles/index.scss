@@ -1,12 +1,10 @@
+@import 'tailwindcss/base';
+@import 'tailwindcss/components';
+@import 'tailwindcss/utilities';
+
 html,
 body {
   font-size: 16px;
-}
-
-body {
-  margin: 0;
-  padding: 0;
-  font-family: "Avenir", Helvetica, Arial, sans-serif;
 }
 
 *,
