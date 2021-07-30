@@ -58,6 +58,7 @@ const baseConfig = {
     new ProgressPlugin(),
   ],
   optimization: {
+    runtimeChunk: 'single',
     splitChunks: {
       chunks: 'all',
     },
