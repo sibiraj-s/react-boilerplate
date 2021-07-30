@@ -13,5 +13,5 @@
 - Clone the git repo: `git clone --depth=1 https://github.com/sibiraj-s/react-boilerplate.git <YOUR_PROJECT_NAME>`
 - Move to appropriate directory: `cd <YOUR_PROJECT_NAME>`
 - Run `npm install` install required dependencies
-- Run `npm start` to start the webserver
+- Run `npm run dev` to start the webserver
 - Visit `http://localhost:7297/` to view the app
