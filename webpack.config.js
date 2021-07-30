@@ -60,7 +60,13 @@ const baseConfig = {
   optimization: {
     runtimeChunk: 'single',
     splitChunks: {
-      chunks: 'all',
+      cacheGroups: {
+        commons: {
+          test: /[\\/]node_modules[\\/]/,
+          name: 'vendors',
+          chunks: 'all',
+        },
+      },
     },
     moduleIds: 'deterministic',
     chunkIds: 'deterministic',
