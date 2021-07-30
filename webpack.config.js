@@ -43,9 +43,9 @@ const baseConfig = {
       },
       {
         test: /\.svg$/i,
-        loader: 'file-loader',
-        options: {
-          name: isProduction ? 'images/[name]-[contenthash].[ext]' : '[name].[ext]',
+        type: 'asset/resource',
+        generator: {
+          filename: isProduction ? 'images/[name]-[contenthash][ext][query]' : '[name][ext]',
         },
       },
     ],
