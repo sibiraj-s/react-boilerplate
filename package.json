@@ -14,10 +14,9 @@
   ],
   "scripts": {
     "lint": "eslint . --ignore-path .gitignore",
-    "dev": "NODE_ENV=development webpack serve",
-    "build": "NODE_ENV=production webpack",
-    "build:pages": "NODE_ENV=gh-pages webpack",
-    "publish:docs": "npm run build:pages && node scripts/gh-pages.js",
+    "dev": "webpack serve --mode=development",
+    "build": "webpack --mode=production",
+    "publish": "node scripts/gh-pages.js",
     "test": "NODE_ENV=test jest",
     "updateSnapshot": "NODE_ENV=test jest --updateSnapshot",
     "prepare": "is-ci || husky install"

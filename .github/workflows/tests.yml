@@ -31,7 +31,7 @@ jobs:
         run: npm ci
 
       - name: Run Jest Tests
-        run: npm run test --if-present
+        run: npm run test
         env:
           NODE_ENV: test
 
@@ -57,6 +57,6 @@ jobs:
         run: npm ci
 
       - name: Run Webpack build
-        run: npm run build --if-present
+        run: npm run build
         env:
           NODE_ENV: production
