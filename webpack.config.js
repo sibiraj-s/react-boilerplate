@@ -1,5 +1,4 @@
-const path = require('path');
-
+const path = require('node:path');
 const { ProgressPlugin } = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
