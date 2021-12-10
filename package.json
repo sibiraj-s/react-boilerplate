@@ -16,8 +16,8 @@
     "lint": "eslint . --ignore-path .gitignore",
     "dev": "webpack serve --mode=development",
     "build": "webpack --mode=production",
-    "test": "NODE_ENV=test jest",
-    "updateSnapshot": "NODE_ENV=test jest --updateSnapshot",
+    "test": "jest",
+    "updateSnapshot": "jest --updateSnapshot",
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
