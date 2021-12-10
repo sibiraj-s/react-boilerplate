@@ -1,7 +1,6 @@
 {
   "compilerOptions": {
-    "target": "es2017",
-    "baseUrl": "./",
+    "baseUrl": ".",
     "paths": {
       "Assets/*": ["src/assets/*"]
     }
