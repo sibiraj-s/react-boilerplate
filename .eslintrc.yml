@@ -9,7 +9,6 @@ extends:
 
 plugins:
   - react-hooks
-  - jest
 
 rules:
   react-hooks/rules-of-hooks: error
@@ -21,8 +20,6 @@ overrides:
       - '!src/*'
     extends:
       - pegasus/node
-    rules:
-      no-console: off
 
 settings:
   react:
