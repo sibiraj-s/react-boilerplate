@@ -2,4 +2,4 @@
   - prettier --write
 
 '*.{js,jsx}':
-  - eslint --ignore-path .gitignore --fix
+  - eslint --fix
