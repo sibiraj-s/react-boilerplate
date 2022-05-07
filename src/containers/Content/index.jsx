@@ -1,5 +1,3 @@
-import React from 'react';
-
 import ReactLogo from 'Assets/react.svg';
 
 const Content = () => {

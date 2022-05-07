@@ -5,14 +5,11 @@ parser: '@babel/eslint-parser'
 extends:
   - pegasus
   - plugin:react/recommended
+  - plugin:react/jsx-runtime
+  - plugin:react-hooks/recommended
   - plugin:jest/recommended
 
-plugins:
-  - react-hooks
-
 rules:
-  react-hooks/rules-of-hooks: error
-  react-hooks/exhaustive-deps: warn
   react/prop-types: 0
 
 overrides:
