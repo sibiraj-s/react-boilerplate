@@ -127,7 +127,7 @@ module.exports = {
   // setupFilesAfterEnv: [],
 
   // Prevent tests from printing messages through the console.
-  silent: true,
+  silent: false,
 
   // A list of paths to snapshot serializer modules Jest should use for snapshot testing
   // snapshotSerializers: [],
@@ -183,7 +183,7 @@ module.exports = {
   // unmockedModulePathPatterns: undefined,
 
   // Indicates whether each individual test should be reported during the run
-  // verbose: null,
+  verbose: true,
 
   // An array of regexp patterns that are matched against all source file paths before re-running tests in watch mode
   // watchPathIgnorePatterns: [],
