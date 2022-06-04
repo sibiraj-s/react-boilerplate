@@ -2,13 +2,13 @@
 @import 'tailwindcss/components';
 @import 'tailwindcss/utilities';
 
-html,
-body {
-  font-size: 16px;
-}
-
 *,
 *::after,
 *::before {
   box-sizing: border-box;
+}
+
+html,
+body {
+  font-size: 16px;
 }

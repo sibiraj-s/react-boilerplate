@@ -5,7 +5,8 @@ module.exports = (api) => {
   return {
     presets: [
       !isEnvTest && [
-        '@babel/preset-env', {
+        '@babel/preset-env',
+        {
           // Allow importing core-js in entrypoint and use browserlist to select polyfills
           useBuiltIns: 'entry',
           // Use corejs@3
@@ -17,7 +18,8 @@ module.exports = (api) => {
         },
       ],
       isEnvTest && [
-        '@babel/preset-env', {
+        '@babel/preset-env',
+        {
           targets: {
             // Compile against the current node version
             node: 'current',
@@ -25,7 +27,8 @@ module.exports = (api) => {
         },
       ],
       [
-        '@babel/preset-react', {
+        '@babel/preset-react',
+        {
           // Adds component stack to warning messages
           // Adds __self attribute to JSX which React will use for some warnings
           development: isEnvDevelopment,

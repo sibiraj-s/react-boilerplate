@@ -37,12 +37,7 @@ const baseConfig = {
       },
       {
         test: /\.s?css$/,
-        use: [
-          isDevEnv ? 'style-loader' : MiniCssExtractPlugin.loader,
-          'css-loader',
-          'postcss-loader',
-          'sass-loader',
-        ],
+        use: [isDevEnv ? 'style-loader' : MiniCssExtractPlugin.loader, 'css-loader', 'postcss-loader', 'sass-loader'],
       },
       {
         test: /\.svg$/i,

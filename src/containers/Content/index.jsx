@@ -2,7 +2,7 @@ import ReactLogo from 'Assets/react.svg';
 
 const Content = () => {
   return (
-    <div className='h-full min-h-screen flex flex-col justify-center sm:items-center px-4 text-black dark:text-white'>
+    <div className='flex h-full min-h-screen flex-col justify-center px-4 text-black dark:text-white sm:items-center'>
       <div className='mb-3'>
         <div className='sm:text-center'>
           <img src={ReactLogo} width='250' className='sm:mx-auto' />

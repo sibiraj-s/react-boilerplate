@@ -3,7 +3,7 @@
 exports[`<Content /> should render and match the snapshot 1`] = `
 <DocumentFragment>
   <div
-    class="h-full min-h-screen flex flex-col justify-center sm:items-center px-4 text-black dark:text-white"
+    class="flex h-full min-h-screen flex-col justify-center px-4 text-black dark:text-white sm:items-center"
   >
     <div
       class="mb-3"
