@@ -1,6 +1,10 @@
+// @ts-check
+/** @typedef {import('webpack').Configuration} WebpackConfig */
+
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const CssMinimizerPlugin = require('css-minimizer-webpack-plugin');
 
+/** @type WebpackConfig */
 module.exports = {
   mode: 'production',
   bail: true,

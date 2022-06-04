@@ -1,3 +1,6 @@
+// @ts-check
+/** @typedef {import('webpack').Configuration} WebpackConfig */
+
 const path = require('node:path');
 const { ProgressPlugin } = require('webpack');
 const HTMLWebpackPlugin = require('html-webpack-plugin');
@@ -10,6 +13,7 @@ const prodConfig = require('./webpack/prod.config');
 
 const isDevEnv = process.env.NODE_ENV === 'development';
 
+/** @type WebpackConfig */
 const baseConfig = {
   context: Paths.rootDir,
   resolve: {

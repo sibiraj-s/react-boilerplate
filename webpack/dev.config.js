@@ -1,3 +1,7 @@
+// @ts-check
+/** @typedef {import('webpack').Configuration} WebpackConfig */
+
+/** @type WebpackConfig */
 module.exports = {
   mode: 'development',
   output: {
