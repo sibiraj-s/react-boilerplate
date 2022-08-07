@@ -21,11 +21,11 @@
     "prepare": "is-ci || husky install"
   },
   "dependencies": {
-    "core-js": "^3.22.8",
-    "react": "^18.1.0",
-    "react-dom": "^18.1.0",
+    "core-js": "^3.24.1",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
     "regenerator-runtime": "^0.13.9",
-    "tailwindcss": "^3.0.24"
+    "tailwindcss": "^3.1.8"
   },
   "devDependencies": {
     "@babel/core": "^7.18.10",
