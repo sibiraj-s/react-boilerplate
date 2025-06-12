@@ -1,4 +1,4 @@
-// Jest Snapshot v1, https://goo.gl/fbAQLP
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
 
 exports[`<Content /> should render and match the snapshot 1`] = `
 <DocumentFragment>
@@ -23,13 +23,13 @@ exports[`<Content /> should render and match the snapshot 1`] = `
         </p>
       </div>
       <p
-        class="sm:text-center"
+        class="sm:text-center text-sm mt-1 text-gray-600 dark:text-gray-300"
       >
         React is a JavaScript library for building user interfaces.
       </p>
     </div>
     <div
-      class="flex flex-col sm:flex-row"
+      class="flex flex-col sm:flex-row mt-4"
     >
       <a
         class="mb-1 sm:mb-0 sm:mr-1"
