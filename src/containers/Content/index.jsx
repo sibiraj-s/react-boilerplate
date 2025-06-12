@@ -8,9 +8,9 @@ const Content = () => {
           <img src={ReactLogo} width='250' className='sm:mx-auto' />
           <p className='text-4xl font-medium'>React.js + Webpack boilerplate</p>
         </div>
-        <p className='sm:text-center'>React is a JavaScript library for building user interfaces.</p>
+        <p className='sm:text-center text-sm mt-1 text-gray-600 dark:text-gray-300'>React is a JavaScript library for building user interfaces.</p>
       </div>
-      <div className='flex flex-col sm:flex-row'>
+      <div className='flex flex-col sm:flex-row mt-4'>
         <a
           className='mb-1 sm:mb-0 sm:mr-1'
           href='https://github.com/sibiraj-s'
