@@ -1,6 +1,6 @@
-// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+// Vitest Snapshot v1, https://vitest.dev/guide/snapshot.html
 
-exports[`<Content /> should render and match the snapshot 1`] = `
+exports[`<Content /> > should render and match the snapshot 1`] = `
 <DocumentFragment>
   <div
     class="flex h-full min-h-screen flex-col justify-center px-4 text-black dark:text-white sm:items-center"
@@ -13,7 +13,7 @@ exports[`<Content /> should render and match the snapshot 1`] = `
       >
         <img
           class="sm:mx-auto"
-          src="test-file-stub"
+          src="/src/assets/react.svg"
           width="250"
         />
         <p

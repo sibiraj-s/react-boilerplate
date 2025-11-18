@@ -1,4 +1,4 @@
-import { describe, it, expect } from '@jest/globals';
+import { describe, it, expect } from 'vitest';
 import ReactDOM from 'react-dom/client';
 import App from './App';
 
