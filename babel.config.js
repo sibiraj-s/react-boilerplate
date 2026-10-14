@@ -7,10 +7,6 @@ module.exports = (api) => {
       !isEnvTest && [
         '@babel/preset-env',
         {
-          // Allow importing core-js in entrypoint and use browserlist to select polyfills
-          useBuiltIns: 'entry',
-          // Use corejs@3
-          corejs: 3,
           // Do not transform modules to CJS
           modules: false,
           // Exclude transforms that make all code slower
@@ -36,6 +32,10 @@ module.exports = (api) => {
           runtime: 'automatic',
         },
       ],
+    ].filter(Boolean),
+    plugins: [
+      // Replace core-js entry import with polyfills required by browserslist targets
+      !isEnvTest && ['babel-plugin-polyfill-corejs3', { method: 'entry-global', version: '3.49' }],
     ].filter(Boolean),
   };
 };
